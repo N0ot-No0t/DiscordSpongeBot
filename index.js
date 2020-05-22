@@ -1,7 +1,9 @@
+require('dotenv').config()
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = 'NzEzMTgzODg2NDMxMjIzOTM5.XsccXA.eBgVtnrUyob3iNg5qnQA4ULQh18';
+const token = process.env.token.toString();
 
 const prefix1 = "&";
 const prefix2 = "*";
@@ -40,14 +42,14 @@ bot.on("message", msg => {
 
         msg.delete();
 
-        msg.reply(outputMsg.toString());
+        msg.channel.send(outputMsg.toString());
     } else if (msg.content.charAt(0) === prefix2) {
 
         croppedMsgReverse = msg.content.substring(1).toLowerCase();
 
         msg.delete();
 
-        msg.reply(croppedMsgReverse);
+        msg.channel.send(croppedMsgReverse);
 
     }
 
