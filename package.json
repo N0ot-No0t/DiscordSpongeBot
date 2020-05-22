@@ -1,0 +1,22 @@
+{
+  "name": "discordspongebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N0ot-No0t/DiscordDadPunBot.git"
+  },
+  "author": "N0ot-No0t",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N0ot-No0t/DiscordDadPunBot/issues"
+  },
+  "homepage": "https://github.com/N0ot-No0t/DiscordDadPunBot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
