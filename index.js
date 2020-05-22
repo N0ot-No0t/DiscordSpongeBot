@@ -8,6 +8,8 @@ const token = process.env.token.toString();
 const prefix1 = "&";
 const prefix2 = "*";
 
+//test
+
 bot.on("ready", () => {
 
     console.log("SpongeBot is online.");
