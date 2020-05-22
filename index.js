@@ -6,9 +6,7 @@ const bot = new Discord.Client();
 const token = process.env.token.toString();
 
 const prefix1 = "&";
-const prefix2 = "*";
-
-//test
+const prefix2 = "&&";
 
 bot.on("ready", () => {
 
@@ -20,8 +18,21 @@ bot.on("message", msg => {
 
     //let args = msg.content.substring(prefix.length).split(" ");
 
+    var croppedMsg;
+    var croppedMsgReverse;
 
-    if (msg.content.charAt(0) === prefix1) {
+
+
+    if (msg.content.charAt(0) === prefix2) {
+
+        croppedMsgReverse = msg.content.substring(1).toLowerCase();
+
+        msg.delete();
+
+        msg.channel.send(croppedMsgReverse);
+
+
+    } else if (msg.content.charAt(0) === prefix1) {
 
         croppedMsg = msg.content.substring(1);
 
@@ -45,13 +56,6 @@ bot.on("message", msg => {
         msg.delete();
 
         msg.channel.send(outputMsg.toString());
-    } else if (msg.content.charAt(0) === prefix2) {
-
-        croppedMsgReverse = msg.content.substring(1).toLowerCase();
-
-        msg.delete();
-
-        msg.channel.send(croppedMsgReverse);
 
     }
 
